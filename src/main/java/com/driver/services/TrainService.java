@@ -56,7 +56,7 @@ public class TrainService {
         for(int i=0; i<trainRoot.length; i++) {
             map.put(trainRoot[i], i);
         }
-        if(!map.containsKey(seatAvailabilityEntryDto.getFromStation().toString()) || map.containsKey(seatAvailabilityEntryDto.getToStation().toString())) {
+        if(!map.containsKey(seatAvailabilityEntryDto.getFromStation().toString()) || !map.containsKey(seatAvailabilityEntryDto.getToStation().toString())) {
             return 0;
         }
 
