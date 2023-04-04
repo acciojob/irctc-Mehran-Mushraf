@@ -54,7 +54,14 @@ public class TicketService {
         int x = -1;
         int y = -1;
 
-        for(int i=0; i< stations.length; i++) {
+        for(int i=0; i<stations.length; i++) {
+            if(bookTicketEntryDto.getFromStation().toString().equals(stations[i])) {
+                x=i;
+                break;
+            }
+        }
+
+        for(int i=0; i<stations.length; i++) {
             if(bookTicketEntryDto.getToStation().toString().equals(stations[i])) {
                 y=i;
                 break;
